@@ -1,8 +1,16 @@
-mod s279;
+use crate::base::Solution;
 
-use crate::s279::s279;
+pub mod base;
+mod s2108;
+mod s279;
 
 fn main() {
     println!("Hello, World!");
-    s279();
+    let sol = Solution::first_palindrome(
+        ["abc", "car", "ada", "racecar", "cool", "papa"]
+            .iter()
+            .map(|s| s.to_string())
+            .collect(),
+    );
+    println!("Sol: {sol}");
 }

@@ -1,6 +1,6 @@
+use crate::base::Solution;
 use std::io::{self, Write};
 
-struct S279 {}
 pub struct ArrayQueue {
     head: usize,
     tail: usize,
@@ -33,7 +33,7 @@ static mut QUEUE: ArrayQueue = ArrayQueue {
 
 const MAX_SIZE: usize = 10001;
 
-impl S279 {
+impl Solution {
     /**
      * Vamos a implementar un BFS de tal modo que
      * iniciando en n, vayamos restando el mayor numero
@@ -96,6 +96,6 @@ pub fn s279() {
             }
         };
 
-        println!("{}", S279::num_squares(num));
+        println!("{}", Solution::num_squares(num));
     }
 }
